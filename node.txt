@@ -39,7 +39,7 @@ Install webpack: npm install webpack webpack-cli --save-dev
 
 //
 
-Creat .gitignore and add node_modules/
+Creat .gitignore and add node_modules/ to it
 
 //
 
@@ -121,7 +121,7 @@ Add watch mode (npm run watch), npm run build webpack shortcut (see json):
 
 //
 
-Add devmode, inline source map, dist cleaning (see json)
+Add devmode, inline source map, dist cleaning (see webpack config)
 webpack-dev-server: https://webpack.js.org/guides/development/
 
 //
@@ -139,7 +139,8 @@ Run command with --force or --legacy-peer-deps if ERESOLVE ERROR
 
 Install ESLint:
 
-Install: npm install eslint --save-dev
+Global (once): npm install eslint --location=global
+Local (useful for collab): npm install eslint --save-dev
 Initiate: npm init @eslint/config
 Add formating on save:
 
@@ -161,7 +162,7 @@ Add console.log rule (eslintrc.json):
 
 //
 
-Install Prettier:
+Install Prettier (local):
 
 Install: npm install --save-dev --save-exact prettier
 Config file: echo {}> .prettierrc.json
@@ -169,7 +170,7 @@ Create a .prettierignore and base it on .gitignore
 
 //
 
-Install eslint-config-prettier: npm install --save-dev eslint-config-prettier
+Install eslint-config-prettier(local): npm install --save-dev eslint-config-prettier
 Add "prettier" to "extends"(eslintrc.json)
 Check for conflicting rules in a file: npx eslint-config-prettier src/index.js
 //
