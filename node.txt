@@ -39,6 +39,10 @@ Install webpack: npm install webpack webpack-cli --save-dev
 
 //
 
+Creat .gitignore and add node_modules/
+
+//
+
 Make package private (json):
 
   -"main": "index.js",
@@ -154,6 +158,23 @@ Add console.log rule (eslintrc.json):
 "rules" : {
     "no-console": "off"
 }
+
+//
+
+Install Prettier:
+
+Install: npm install --save-dev --save-exact prettier
+Config file: echo {}> .prettierrc.json
+Create a .prettierignore and base it on .gitignore
+
+//
+
+Install eslint-config-prettier: npm install --save-dev eslint-config-prettier
+Add "prettier" to "extends"(eslintrc.json)
+Check for conflicting rules in a file: npx eslint-config-prettier src/index.js
+//
+
+Move config files to root
 
 //
 
