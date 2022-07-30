@@ -179,6 +179,32 @@ Move config files to root
 
 //
 
+Babel (for old browsers or testing new JS features):
+
+Install: npm install -D babel-loader @babel/core @babel/preset-env webpack
+Add module(webpack.config):
+
+{
+      test: /\.m?js$/,
+      exclude: /node_modules/,
+      use: {
+        loader: 'babel-loader',
+        options: {
+          presets: [
+            ['@babel/preset-env', { targets: "defaults" }]
+          ]
+        }
+      }
+    }
+
+Add supported browsers(json):
+
+"browserslist": [
+    "defaults"
+  ]
+
+//
+
 Useful libraries:
 
 https://lodash.com/
